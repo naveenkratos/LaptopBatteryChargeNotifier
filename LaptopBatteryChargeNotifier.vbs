@@ -71,7 +71,7 @@ Do While True
 		If iPercent > 100 Then iPercent = 100
 
 		' --- Check for "Fully Charged" Condition ---
-		If bCharging  Then  ' And (iPercent >= FullHealthPercent)
+		If bCharging And (iPercent >= FullHealthPercent) Then  ' 
 			ps1File = scriptFolder & "\FullHealthUI.ps1"
 			If objFSO.FileExists(ps1File) Then
 				psCommand = "powershell -NoProfile -ExecutionPolicy Bypass -File """ & ps1File & """ " & RepeatTimeInSec & " " & iPercent
@@ -79,7 +79,7 @@ Do While True
 			End If
 		
 		' --- Check for "Low Battery" Condition ---
-		ElseIf (Not bCharging)  Then  ' And (iPercent <= LowHealthPercent)
+		ElseIf (Not bCharging) And (iPercent <= LowHealthPercent) Then  ' 
 			ps1File = scriptFolder & "\LowHealthUI.ps1"
 			If objFSO.FileExists(ps1File) Then
 				psCommand = "powershell -NoProfile -ExecutionPolicy Bypass -File """ & ps1File & """ " & RepeatTimeInSec & " " & iPercent
