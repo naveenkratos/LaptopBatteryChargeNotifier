@@ -30,7 +30,7 @@ If iFull = 0 Then iFull = 1 ' Prevent divide by zero
 Dim RepeatTimeInSec, VBRepeatTimeInSec, FullHealthPercent, LowHealthPercent
 RepeatTimeInSec = 2
 VBRepeatTimeInSec = RepeatTimeInSec + 1
-FullHealthPercent = 85
+FullHealthPercent = 90
 LowHealthPercent = 22
 
 ' --- Setup Variables ---
@@ -57,7 +57,7 @@ Do While True
 
 		For Each oResult In oResults
 			iRemaining = oResult.RemainingCapacity
-			bCharging = oResult.Charging
+			bCharging = oResult.PowerOnline
 		Next
 
 		If iFull > 0 Then
