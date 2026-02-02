@@ -1,4 +1,3 @@
-asdasdasd
 # LaptopBatteryChargeNotifier
 
 LaptopBatteryChargeNotifier for windows
