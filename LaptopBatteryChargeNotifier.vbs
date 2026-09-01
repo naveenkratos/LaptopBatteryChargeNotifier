@@ -28,7 +28,7 @@ If iFull = 0 Then iFull = 1 ' Prevent divide by zero
 
 ' --- Configurations ---
 Dim RepeatTimeInSec, VBRepeatTimeInSec, FullHealthPercent, LowHealthPercent
-RepeatTimeInSec = 2
+RepeatTimeInSec = 1.8
 VBRepeatTimeInSec = RepeatTimeInSec + 1
 FullHealthPercent = 90
 LowHealthPercent = 22
